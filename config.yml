@@ -1,0 +1,4 @@
+lunarConfig:
+  curService: "foo"
+  targetInf: "bar"
+  filePath: "foobar"
