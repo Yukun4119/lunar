@@ -1,0 +1,4 @@
+lunarConfig:
+  curService: "foo"
+  targetInf: "calculateCeil"
+  filePath: "/Users/rion/Desktop/Advanced-Go-Programming-in-7-Days-master/Day-1/2-Requirements/workingGoKnowledge.go"
