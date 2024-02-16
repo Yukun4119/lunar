@@ -17,7 +17,6 @@ func main() {
 		Config: loadConfig(),
 	}
 
-	// Step 2
 	// parse code
 	fset := token.NewFileSet()
 	node, err := parser.ParseFile(fset, lunar.Config.LunarConfig.FilePath, nil, parser.ParseComments)
@@ -26,11 +25,9 @@ func main() {
 	}
 	ast.Print(fset, node)
 
-	// Step 3
 	// Get all the participants
 	lunar.Participants = append(lunar.Participants, lunar.Config.LunarConfig.TargetInf)
 
-	// step 4
 	// Start PlantUML sequence diagram
 	lunar.PlantUML = append(lunar.PlantUML, "@startuml")
 	lunar.PlantUML = append(lunar.PlantUML, "autonumber")
