@@ -10,34 +10,17 @@ import (
 	"os"
 )
 
-type YamlConfig struct {
-	LunarConfig LunarConfig `yaml:"lunarConfig"`
-}
-
-type LunarConfig struct {
-	CurService string `yaml:"curService"`
-	TargetInf  string `yaml:"targetInf"`
-	FilePath   string `yaml:"filePath"`
-}
-
-var (
-	Config       YamlConfig
-	plantUML     []string
-	participants []string
-)
-
 func main() {
 	log.SetFlags(log.Lshortfile | log.Lmicroseconds)
 
-	err := loadConfig()
-	if err != nil {
-		log.Fatal("load config error")
+	lunar := service.LunarUML{
+		Config: loadConfig(),
 	}
 
 	// Step 2
 	// parse code
 	fset := token.NewFileSet()
-	node, err := parser.ParseFile(fset, Config.LunarConfig.FilePath, nil, parser.ParseComments)
+	node, err := parser.ParseFile(fset, lunar.Config.LunarConfig.FilePath, nil, parser.ParseComments)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -45,37 +28,41 @@ func main() {
 
 	// Step 3
 	// Get all the participants
-	participants = append(participants, Config.LunarConfig.TargetInf)
+	lunar.Participants = append(lunar.Participants, lunar.Config.LunarConfig.TargetInf)
 
 	// step 4
 	// Start PlantUML sequence diagram
-	plantUML = append(plantUML, "@startuml")
-	plantUML = append(plantUML, "autonumber")
+	lunar.PlantUML = append(lunar.PlantUML, "@startuml")
+	lunar.PlantUML = append(lunar.PlantUML, "autonumber")
 
 	ast.Inspect(node, func(n ast.Node) bool {
 		switch fn := n.(type) {
 		case *ast.FuncDecl:
-			if fn.Name.Name == Config.LunarConfig.TargetInf {
-				service.TranverseFunc(fn)
+			if fn.Name.Name == lunar.Config.LunarConfig.TargetInf {
+				lunar.TranverseFunc(fn)
 			}
 		}
 		return true
 	})
 
 	// End PlantUML sequence diagram
-	plantUML = append(plantUML, "@enduml")
+	lunar.PlantUML = append(lunar.PlantUML, "@enduml")
 
 	// Print PlantUML
-	for _, line := range plantUML {
+	for _, line := range lunar.PlantUML {
 		println(line)
 	}
 }
 
-func loadConfig() error {
+func loadConfig() service.YamlConfig {
 	file, err := os.ReadFile("./config/config.yml")
 	if err != nil {
-		log.Println("read file error")
-		return err
+		log.Fatal("read file error")
 	}
-	return yaml.Unmarshal(file, &Config)
+	config := service.YamlConfig{}
+	err = yaml.Unmarshal(file, &config)
+	if err != nil {
+		log.Fatal("unmarshal error")
+	}
+	return config
 }
