@@ -48,6 +48,9 @@ func (l *LunarUML) TranverseFunc(fn *ast.FuncDecl) {
 			l.AnalyseIfStmt(nodeType)
 		case *ast.RangeStmt:
 			l.AnalyseRangeStmt(nodeType)
+		case *ast.ExprStmt:
+			// TODO: do something
+			l.AnalyseCallExpr(nodeType.X)
 		}
 	}
 }
