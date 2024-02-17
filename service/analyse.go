@@ -3,6 +3,7 @@ package service
 import (
 	"fmt"
 	"go/ast"
+	"go/token"
 	"lunar_uml/util"
 	"strings"
 )
@@ -11,6 +12,7 @@ type LunarConfig struct {
 	CurService string `yaml:"curService"`
 	TargetInf  string `yaml:"targetInf"`
 	FilePath   string `yaml:"filePath"`
+	IsDebug    bool   `yaml:"isDebug"`
 }
 
 type YamlConfig struct {
@@ -21,12 +23,27 @@ type LunarUML struct {
 	Config       YamlConfig
 	PlantUML     []string
 	Participants []string
+	FSet         *token.FileSet
+	Node         *ast.File
 }
 
 // TODO: Do I need interface?
 //type Analysis interface {
 //	AnalyseCallExpr(expr *ast.CallExpr)
 //}
+
+func (l *LunarUML) Inspect() {
+	// TODO: make the code neater
+	ast.Inspect(l.Node, func(n ast.Node) bool {
+		switch fn := n.(type) {
+		case *ast.FuncDecl:
+			if fn.Name.Name == l.Config.LunarConfig.TargetInf {
+				l.TranverseFunc(fn)
+			}
+		}
+		return true
+	})
+}
 
 func (l *LunarUML) TranverseFunc(fn *ast.FuncDecl) {
 	for _, node := range fn.Body.List {

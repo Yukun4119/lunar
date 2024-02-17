@@ -12,6 +12,7 @@ func demo() {
 }
 
 func foo() {
+	bar()
 	fmt.Print("hello")
 }
 
