@@ -25,6 +25,7 @@ func (l *LunarUML) OutputUML() {
 		return
 	}
 	defer outputFile.Close()
+
 	writer := bufio.NewWriter(outputFile)
 	for _, line := range l.PlantUML {
 		fmt.Fprintln(writer, line)

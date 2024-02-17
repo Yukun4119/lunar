@@ -1,5 +1,5 @@
 lunarConfig:
-  curService: "foo"
-  targetInf: "demo"
+  curService: "test"
+  targetInf: "foo"
   filePath: "/Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go"
   isDebug: true

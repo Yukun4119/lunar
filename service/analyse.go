@@ -28,6 +28,7 @@ func (l *LunarUML) Inspect() {
 		switch fn := n.(type) {
 		case *ast.FuncDecl:
 			if fn.Name.Name == l.Config.LunarConfig.TargetInf {
+				log.Println("Found the target")
 				l.TranverseFunc(fn)
 			}
 		}
