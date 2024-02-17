@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"go/ast"
 	"go/token"
+	"log"
 	"lunar_uml/util"
 	"strings"
 )
@@ -43,6 +44,7 @@ func (l *LunarUML) Inspect() {
 		}
 		return true
 	})
+	log.Println("Finish Inspecting")
 }
 
 func (l *LunarUML) TranverseFunc(fn *ast.FuncDecl) {

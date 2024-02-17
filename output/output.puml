@@ -1,0 +1,6 @@
+@startuml
+autonumber
+alt if a == *ast.BasicLit
+foo -> foo: call foo
+end
+@enduml

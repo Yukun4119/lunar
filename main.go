@@ -10,20 +10,19 @@ import (
 
 func main() {
 	initLogConfig()
-	// TODO: what is the difference whether there is & or not
 	lunar := &service.LunarUML{
 		Config: loadConfig(),
 	}
 	lunar.InitUML()
 	lunar.ParseCodeWithAST()
 	lunar.PrintNodeForDebug()
-	// start traversing
 	lunar.Inspect()
-	lunar.PrintUML()
+	lunar.OutputUML()
 }
 
 func initLogConfig() {
 	log.SetFlags(log.Lshortfile | log.Lmicroseconds)
+	log.Println("Finish init log")
 }
 
 func loadConfig() service.YamlConfig {
