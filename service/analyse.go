@@ -5,23 +5,13 @@ import (
 	"go/ast"
 	"go/token"
 	"log"
+	"lunar_uml/models"
 	"lunar_uml/util"
 	"strings"
 )
 
-type LunarConfig struct {
-	CurService string `yaml:"curService"`
-	TargetInf  string `yaml:"targetInf"`
-	FilePath   string `yaml:"filePath"`
-	IsDebug    bool   `yaml:"isDebug"`
-}
-
-type YamlConfig struct {
-	LunarConfig LunarConfig `yaml:"lunarConfig"`
-}
-
 type LunarUML struct {
-	Config       YamlConfig
+	Config       models.YamlConfig
 	PlantUML     []string
 	Participants []string
 	FSet         *token.FileSet
@@ -34,7 +24,6 @@ type LunarUML struct {
 //}
 
 func (l *LunarUML) Inspect() {
-	// TODO: make the code neater
 	ast.Inspect(l.Node, func(n ast.Node) bool {
 		switch fn := n.(type) {
 		case *ast.FuncDecl:
