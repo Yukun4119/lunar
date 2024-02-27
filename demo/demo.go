@@ -3,11 +3,12 @@ package demo
 import "fmt"
 
 func demo() {
+	foo()
 	a := 1
 	if a == 1 {
-		foo()
-	} else {
 		bar()
+	} else {
+		foo()
 	}
 }
 

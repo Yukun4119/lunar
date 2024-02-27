@@ -28,7 +28,7 @@ func (l *LunarUML) Inspect() {
 		switch fn := n.(type) {
 		case *ast.FuncDecl:
 			if fn.Name.Name == l.Config.LunarConfig.TargetInf {
-				log.Info("Found the target")
+				log.Info("Found the target: %+v", l.Config.LunarConfig.TargetInf)
 				l.TranverseFunc(fn)
 			}
 		}
@@ -48,9 +48,8 @@ func (l *LunarUML) TranverseFunc(fn *ast.FuncDecl) {
 			l.AnalyseIfStmt(nodeType)
 		case *ast.RangeStmt:
 			l.AnalyseRangeStmt(nodeType)
-			//case *ast.ExprStmt:
-			//	// TODO: do something
-			//	l.AnalyseCallExpr(nodeType.X)
+		case *ast.ExprStmt:
+			l.AnalyseCallExpr(nodeType.X.(*ast.CallExpr))
 		}
 	}
 }
@@ -92,6 +91,7 @@ func (l *LunarUML) AnalyseRangeStmt(r *ast.RangeStmt) {
 }
 
 func (l *LunarUML) AnalyseIfStmt(ifStmt *ast.IfStmt) {
+	log.Info("hit IfStmt")
 	Cond := l.AnalyseExprIfStmt(ifStmt.Cond)
 	l.PlantUML = append(l.PlantUML, "alt if "+Cond)
 	l.Tranverse(ifStmt.Body)
@@ -106,6 +106,7 @@ func (l *LunarUML) AnalyseSwitchStmt(SwitchStmt *ast.SwitchStmt) {
 }
 
 func (l *LunarUML) AnalyseAssignStmt(AssignStmt *ast.AssignStmt) {
+	log.Info("hit AssignStmt")
 	l.Tranverse(AssignStmt)
 }
 
