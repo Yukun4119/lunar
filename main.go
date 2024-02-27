@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/Yukun4119/golang_utils/log"
 	"gopkg.in/yaml.v3"
-	"log"
 	"lunar_uml/consts"
 	"lunar_uml/models"
 	"lunar_uml/service"
@@ -10,7 +10,8 @@ import (
 )
 
 func main() {
-	initLogConfig()
+	log.Info("Starting...")
+
 	lunar := &service.LunarUML{
 		Config: loadConfig(),
 	}
@@ -21,20 +22,17 @@ func main() {
 	lunar.OutputUML()
 }
 
-func initLogConfig() {
-	log.SetFlags(log.Lshortfile | log.Lmicroseconds)
-	log.Println("Finish init log")
-}
-
 func loadConfig() models.YamlConfig {
 	file, err := os.ReadFile(consts.RelativeYamlConfigFilePath)
 	if err != nil {
-		log.Fatal("read file error")
+		log.Error("read file error")
+		os.Exit(1)
 	}
 	config := models.YamlConfig{}
 	err = yaml.Unmarshal(file, &config)
 	if err != nil {
-		log.Fatal("unmarshal error")
+		log.Error("unmarshal error")
+		os.Exit(1)
 	}
 	return config
 }

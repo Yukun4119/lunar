@@ -2,9 +2,9 @@ package service
 
 import (
 	"fmt"
+	"github.com/Yukun4119/golang_utils/log"
 	"go/ast"
 	"go/token"
-	"log"
 	"lunar_uml/models"
 	"lunar_uml/util"
 	"strings"
@@ -28,13 +28,13 @@ func (l *LunarUML) Inspect() {
 		switch fn := n.(type) {
 		case *ast.FuncDecl:
 			if fn.Name.Name == l.Config.LunarConfig.TargetInf {
-				log.Println("Found the target")
+				log.Info("Found the target")
 				l.TranverseFunc(fn)
 			}
 		}
 		return true
 	})
-	log.Println("Finish Inspecting")
+	log.Info("Finish Inspecting")
 }
 
 func (l *LunarUML) TranverseFunc(fn *ast.FuncDecl) {
@@ -48,9 +48,9 @@ func (l *LunarUML) TranverseFunc(fn *ast.FuncDecl) {
 			l.AnalyseIfStmt(nodeType)
 		case *ast.RangeStmt:
 			l.AnalyseRangeStmt(nodeType)
-		case *ast.ExprStmt:
-			// TODO: do something
-			l.AnalyseCallExpr(nodeType.X)
+			//case *ast.ExprStmt:
+			//	// TODO: do something
+			//	l.AnalyseCallExpr(nodeType.X)
 		}
 	}
 }

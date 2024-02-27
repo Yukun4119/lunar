@@ -1,288 +1,700 @@
      0  *ast.File {
      1  .  Doc: nil
-     2  .  Package: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:1:1
+     2  .  Package: main.go:1:1
      3  .  Name: *ast.Ident {
-     4  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:1:9
-     5  .  .  Name: "demo"
+     4  .  .  NamePos: main.go:1:9
+     5  .  .  Name: "main"
      6  .  .  Obj: nil
      7  .  }
-     8  .  Decls: []ast.Decl (len = 4) {
+     8  .  Decls: []ast.Decl (len = 3) {
      9  .  .  0: *ast.GenDecl {
     10  .  .  .  Doc: nil
-    11  .  .  .  TokPos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:3:1
+    11  .  .  .  TokPos: main.go:3:1
     12  .  .  .  Tok: import
-    13  .  .  .  Lparen: -
-    14  .  .  .  Specs: []ast.Spec (len = 1) {
+    13  .  .  .  Lparen: main.go:3:8
+    14  .  .  .  Specs: []ast.Spec (len = 6) {
     15  .  .  .  .  0: *ast.ImportSpec {
     16  .  .  .  .  .  Doc: nil
     17  .  .  .  .  .  Name: nil
     18  .  .  .  .  .  Path: *ast.BasicLit {
-    19  .  .  .  .  .  .  ValuePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:3:8
+    19  .  .  .  .  .  .  ValuePos: main.go:4:2
     20  .  .  .  .  .  .  Kind: STRING
-    21  .  .  .  .  .  .  Value: "\"fmt\""
+    21  .  .  .  .  .  .  Value: "\"github.com/Yukun4119/golang_utils/log\""
     22  .  .  .  .  .  }
     23  .  .  .  .  .  Comment: nil
     24  .  .  .  .  .  EndPos: -
     25  .  .  .  .  }
-    26  .  .  .  }
-    27  .  .  .  Rparen: -
-    28  .  .  }
-    29  .  .  1: *ast.FuncDecl {
-    30  .  .  .  Doc: nil
-    31  .  .  .  Recv: nil
-    32  .  .  .  Name: *ast.Ident {
-    33  .  .  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:5:6
-    34  .  .  .  .  Name: "demo"
-    35  .  .  .  .  Obj: *ast.Object {
-    36  .  .  .  .  .  Kind: func
-    37  .  .  .  .  .  Name: "demo"
-    38  .  .  .  .  .  Decl: *(obj @ 29)
-    39  .  .  .  .  .  Data: nil
-    40  .  .  .  .  .  Type: nil
-    41  .  .  .  .  }
-    42  .  .  .  }
-    43  .  .  .  Type: *ast.FuncType {
-    44  .  .  .  .  Func: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:5:1
-    45  .  .  .  .  TypeParams: nil
-    46  .  .  .  .  Params: *ast.FieldList {
-    47  .  .  .  .  .  Opening: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:5:10
-    48  .  .  .  .  .  List: nil
-    49  .  .  .  .  .  Closing: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:5:11
-    50  .  .  .  .  }
-    51  .  .  .  .  Results: nil
-    52  .  .  .  }
-    53  .  .  .  Body: *ast.BlockStmt {
-    54  .  .  .  .  Lbrace: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:5:13
-    55  .  .  .  .  List: []ast.Stmt (len = 2) {
-    56  .  .  .  .  .  0: *ast.AssignStmt {
-    57  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
-    58  .  .  .  .  .  .  .  0: *ast.Ident {
-    59  .  .  .  .  .  .  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:6:2
-    60  .  .  .  .  .  .  .  .  Name: "a"
-    61  .  .  .  .  .  .  .  .  Obj: *ast.Object {
-    62  .  .  .  .  .  .  .  .  .  Kind: var
-    63  .  .  .  .  .  .  .  .  .  Name: "a"
-    64  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 56)
-    65  .  .  .  .  .  .  .  .  .  Data: nil
-    66  .  .  .  .  .  .  .  .  .  Type: nil
-    67  .  .  .  .  .  .  .  .  }
-    68  .  .  .  .  .  .  .  }
-    69  .  .  .  .  .  .  }
-    70  .  .  .  .  .  .  TokPos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:6:4
-    71  .  .  .  .  .  .  Tok: :=
-    72  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
-    73  .  .  .  .  .  .  .  0: *ast.BasicLit {
-    74  .  .  .  .  .  .  .  .  ValuePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:6:7
-    75  .  .  .  .  .  .  .  .  Kind: INT
-    76  .  .  .  .  .  .  .  .  Value: "1"
-    77  .  .  .  .  .  .  .  }
-    78  .  .  .  .  .  .  }
-    79  .  .  .  .  .  }
-    80  .  .  .  .  .  1: *ast.IfStmt {
-    81  .  .  .  .  .  .  If: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:7:2
-    82  .  .  .  .  .  .  Init: nil
-    83  .  .  .  .  .  .  Cond: *ast.BinaryExpr {
-    84  .  .  .  .  .  .  .  X: *ast.Ident {
-    85  .  .  .  .  .  .  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:7:5
-    86  .  .  .  .  .  .  .  .  Name: "a"
-    87  .  .  .  .  .  .  .  .  Obj: *(obj @ 61)
-    88  .  .  .  .  .  .  .  }
-    89  .  .  .  .  .  .  .  OpPos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:7:7
-    90  .  .  .  .  .  .  .  Op: ==
-    91  .  .  .  .  .  .  .  Y: *ast.BasicLit {
-    92  .  .  .  .  .  .  .  .  ValuePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:7:10
-    93  .  .  .  .  .  .  .  .  Kind: INT
-    94  .  .  .  .  .  .  .  .  Value: "1"
-    95  .  .  .  .  .  .  .  }
-    96  .  .  .  .  .  .  }
-    97  .  .  .  .  .  .  Body: *ast.BlockStmt {
-    98  .  .  .  .  .  .  .  Lbrace: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:7:12
-    99  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
-   100  .  .  .  .  .  .  .  .  0: *ast.ExprStmt {
-   101  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
-   102  .  .  .  .  .  .  .  .  .  .  Fun: *ast.Ident {
-   103  .  .  .  .  .  .  .  .  .  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:8:3
-   104  .  .  .  .  .  .  .  .  .  .  .  Name: "foo"
-   105  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
-   106  .  .  .  .  .  .  .  .  .  .  .  .  Kind: func
-   107  .  .  .  .  .  .  .  .  .  .  .  .  Name: "foo"
-   108  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *ast.FuncDecl {
-   109  .  .  .  .  .  .  .  .  .  .  .  .  .  Doc: nil
-   110  .  .  .  .  .  .  .  .  .  .  .  .  .  Recv: nil
-   111  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: *ast.Ident {
-   112  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:14:6
-   113  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "foo"
-   114  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 105)
-   115  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   116  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.FuncType {
-   117  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Func: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:14:1
-   118  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TypeParams: nil
-   119  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Params: *ast.FieldList {
-   120  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Opening: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:14:9
-   121  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  List: nil
-   122  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Closing: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:14:10
-   123  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   124  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Results: nil
-   125  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   126  .  .  .  .  .  .  .  .  .  .  .  .  .  Body: *ast.BlockStmt {
-   127  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrace: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:14:12
-   128  .  .  .  .  .  .  .  .  .  .  .  .  .  .  List: []ast.Stmt (len = 2) {
-   129  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.ExprStmt {
-   130  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
-   131  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.Ident {
-   132  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:15:2
-   133  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "bar"
-   134  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
-   135  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: func
-   136  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "bar"
-   137  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *ast.FuncDecl {
-   138  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Doc: nil
-   139  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Recv: nil
-   140  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: *ast.Ident {
-   141  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:19:6
-   142  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "bar"
-   143  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 134)
-   144  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   145  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.FuncType {
-   146  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Func: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:19:1
-   147  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TypeParams: nil
-   148  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Params: *ast.FieldList {
-   149  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Opening: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:19:9
-   150  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  List: nil
-   151  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Closing: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:19:10
-   152  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   153  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Results: nil
-   154  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   155  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Body: *ast.BlockStmt {
-   156  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrace: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:19:12
-   157  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
-   158  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.ExprStmt {
-   159  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
-   160  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
-   161  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
-   162  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:20:2
-   163  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "fmt"
-   164  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
-   165  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   166  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
-   167  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:20:6
-   168  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Print"
-   169  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
-   170  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   171  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   172  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:20:11
-   173  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
-   174  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
-   175  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:20:12
-   176  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
-   177  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"world\""
-   178  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   179  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   180  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
-   181  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:20:19
-   182  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   183  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   184  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   185  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rbrace: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:21:1
-   186  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   187  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   188  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Data: nil
-   189  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: nil
-   190  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   191  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   192  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:15:5
-   193  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Args: nil
-   194  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
-   195  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:15:6
-   196  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   197  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   198  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.ExprStmt {
-   199  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
-   200  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
-   201  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
-   202  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:16:2
-   203  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "fmt"
-   204  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
-   205  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   206  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
-   207  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:16:6
-   208  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Print"
-   209  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
-   210  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   211  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   212  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:16:11
-   213  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
-   214  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
-   215  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:16:12
-   216  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
-   217  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"hello\""
-   218  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   219  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   220  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
-   221  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:16:19
-   222  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   223  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   224  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   225  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rbrace: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:17:1
-   226  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-   227  .  .  .  .  .  .  .  .  .  .  .  .  }
-   228  .  .  .  .  .  .  .  .  .  .  .  .  Data: nil
-   229  .  .  .  .  .  .  .  .  .  .  .  .  Type: nil
-   230  .  .  .  .  .  .  .  .  .  .  .  }
-   231  .  .  .  .  .  .  .  .  .  .  }
-   232  .  .  .  .  .  .  .  .  .  .  Lparen: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:8:6
-   233  .  .  .  .  .  .  .  .  .  .  Args: nil
-   234  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
-   235  .  .  .  .  .  .  .  .  .  .  Rparen: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:8:7
-   236  .  .  .  .  .  .  .  .  .  }
-   237  .  .  .  .  .  .  .  .  }
-   238  .  .  .  .  .  .  .  }
-   239  .  .  .  .  .  .  .  Rbrace: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:9:2
-   240  .  .  .  .  .  .  }
-   241  .  .  .  .  .  .  Else: *ast.BlockStmt {
-   242  .  .  .  .  .  .  .  Lbrace: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:9:9
-   243  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
-   244  .  .  .  .  .  .  .  .  0: *ast.ExprStmt {
-   245  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
-   246  .  .  .  .  .  .  .  .  .  .  Fun: *ast.Ident {
-   247  .  .  .  .  .  .  .  .  .  .  .  NamePos: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:10:3
-   248  .  .  .  .  .  .  .  .  .  .  .  Name: "bar"
-   249  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 134)
-   250  .  .  .  .  .  .  .  .  .  .  }
-   251  .  .  .  .  .  .  .  .  .  .  Lparen: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:10:6
-   252  .  .  .  .  .  .  .  .  .  .  Args: nil
-   253  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
-   254  .  .  .  .  .  .  .  .  .  .  Rparen: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:10:7
-   255  .  .  .  .  .  .  .  .  .  }
-   256  .  .  .  .  .  .  .  .  }
-   257  .  .  .  .  .  .  .  }
-   258  .  .  .  .  .  .  .  Rbrace: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:11:2
-   259  .  .  .  .  .  .  }
-   260  .  .  .  .  .  }
-   261  .  .  .  .  }
-   262  .  .  .  .  Rbrace: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:12:1
-   263  .  .  .  }
-   264  .  .  }
-   265  .  .  2: *(obj @ 108)
-   266  .  .  3: *(obj @ 137)
-   267  .  }
-   268  .  FileStart: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:1:1
-   269  .  FileEnd: /Users/rion/Library/CloudStorage/Dropbox/Projects/lunar/demo/demo.go:21:3
-   270  .  Scope: *ast.Scope {
-   271  .  .  Outer: nil
-   272  .  .  Objects: map[string]*ast.Object (len = 3) {
-   273  .  .  .  "demo": *(obj @ 35)
-   274  .  .  .  "foo": *(obj @ 105)
-   275  .  .  .  "bar": *(obj @ 134)
-   276  .  .  }
-   277  .  }
-   278  .  Imports: []*ast.ImportSpec (len = 1) {
-   279  .  .  0: *(obj @ 15)
-   280  .  }
-   281  .  Unresolved: []*ast.Ident (len = 2) {
-   282  .  .  0: *(obj @ 201)
-   283  .  .  1: *(obj @ 161)
-   284  .  }
-   285  .  Comments: nil
-   286  .  GoVersion: ""
-   287  }
+    26  .  .  .  .  1: *ast.ImportSpec {
+    27  .  .  .  .  .  Doc: nil
+    28  .  .  .  .  .  Name: nil
+    29  .  .  .  .  .  Path: *ast.BasicLit {
+    30  .  .  .  .  .  .  ValuePos: main.go:5:2
+    31  .  .  .  .  .  .  Kind: STRING
+    32  .  .  .  .  .  .  Value: "\"gopkg.in/yaml.v3\""
+    33  .  .  .  .  .  }
+    34  .  .  .  .  .  Comment: nil
+    35  .  .  .  .  .  EndPos: -
+    36  .  .  .  .  }
+    37  .  .  .  .  2: *ast.ImportSpec {
+    38  .  .  .  .  .  Doc: nil
+    39  .  .  .  .  .  Name: nil
+    40  .  .  .  .  .  Path: *ast.BasicLit {
+    41  .  .  .  .  .  .  ValuePos: main.go:6:2
+    42  .  .  .  .  .  .  Kind: STRING
+    43  .  .  .  .  .  .  Value: "\"lunar_uml/consts\""
+    44  .  .  .  .  .  }
+    45  .  .  .  .  .  Comment: nil
+    46  .  .  .  .  .  EndPos: -
+    47  .  .  .  .  }
+    48  .  .  .  .  3: *ast.ImportSpec {
+    49  .  .  .  .  .  Doc: nil
+    50  .  .  .  .  .  Name: nil
+    51  .  .  .  .  .  Path: *ast.BasicLit {
+    52  .  .  .  .  .  .  ValuePos: main.go:7:2
+    53  .  .  .  .  .  .  Kind: STRING
+    54  .  .  .  .  .  .  Value: "\"lunar_uml/models\""
+    55  .  .  .  .  .  }
+    56  .  .  .  .  .  Comment: nil
+    57  .  .  .  .  .  EndPos: -
+    58  .  .  .  .  }
+    59  .  .  .  .  4: *ast.ImportSpec {
+    60  .  .  .  .  .  Doc: nil
+    61  .  .  .  .  .  Name: nil
+    62  .  .  .  .  .  Path: *ast.BasicLit {
+    63  .  .  .  .  .  .  ValuePos: main.go:8:2
+    64  .  .  .  .  .  .  Kind: STRING
+    65  .  .  .  .  .  .  Value: "\"lunar_uml/service\""
+    66  .  .  .  .  .  }
+    67  .  .  .  .  .  Comment: nil
+    68  .  .  .  .  .  EndPos: -
+    69  .  .  .  .  }
+    70  .  .  .  .  5: *ast.ImportSpec {
+    71  .  .  .  .  .  Doc: nil
+    72  .  .  .  .  .  Name: nil
+    73  .  .  .  .  .  Path: *ast.BasicLit {
+    74  .  .  .  .  .  .  ValuePos: main.go:9:2
+    75  .  .  .  .  .  .  Kind: STRING
+    76  .  .  .  .  .  .  Value: "\"os\""
+    77  .  .  .  .  .  }
+    78  .  .  .  .  .  Comment: nil
+    79  .  .  .  .  .  EndPos: -
+    80  .  .  .  .  }
+    81  .  .  .  }
+    82  .  .  .  Rparen: main.go:10:1
+    83  .  .  }
+    84  .  .  1: *ast.FuncDecl {
+    85  .  .  .  Doc: nil
+    86  .  .  .  Recv: nil
+    87  .  .  .  Name: *ast.Ident {
+    88  .  .  .  .  NamePos: main.go:12:6
+    89  .  .  .  .  Name: "main"
+    90  .  .  .  .  Obj: *ast.Object {
+    91  .  .  .  .  .  Kind: func
+    92  .  .  .  .  .  Name: "main"
+    93  .  .  .  .  .  Decl: *(obj @ 84)
+    94  .  .  .  .  .  Data: nil
+    95  .  .  .  .  .  Type: nil
+    96  .  .  .  .  }
+    97  .  .  .  }
+    98  .  .  .  Type: *ast.FuncType {
+    99  .  .  .  .  Func: main.go:12:1
+   100  .  .  .  .  TypeParams: nil
+   101  .  .  .  .  Params: *ast.FieldList {
+   102  .  .  .  .  .  Opening: main.go:12:10
+   103  .  .  .  .  .  List: nil
+   104  .  .  .  .  .  Closing: main.go:12:11
+   105  .  .  .  .  }
+   106  .  .  .  .  Results: nil
+   107  .  .  .  }
+   108  .  .  .  Body: *ast.BlockStmt {
+   109  .  .  .  .  Lbrace: main.go:12:13
+   110  .  .  .  .  List: []ast.Stmt (len = 7) {
+   111  .  .  .  .  .  0: *ast.ExprStmt {
+   112  .  .  .  .  .  .  X: *ast.CallExpr {
+   113  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   114  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   115  .  .  .  .  .  .  .  .  .  NamePos: main.go:13:2
+   116  .  .  .  .  .  .  .  .  .  Name: "log"
+   117  .  .  .  .  .  .  .  .  .  Obj: nil
+   118  .  .  .  .  .  .  .  .  }
+   119  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   120  .  .  .  .  .  .  .  .  .  NamePos: main.go:13:6
+   121  .  .  .  .  .  .  .  .  .  Name: "Info"
+   122  .  .  .  .  .  .  .  .  .  Obj: nil
+   123  .  .  .  .  .  .  .  .  }
+   124  .  .  .  .  .  .  .  }
+   125  .  .  .  .  .  .  .  Lparen: main.go:13:10
+   126  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   127  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   128  .  .  .  .  .  .  .  .  .  ValuePos: main.go:13:11
+   129  .  .  .  .  .  .  .  .  .  Kind: STRING
+   130  .  .  .  .  .  .  .  .  .  Value: "\"Starting...\""
+   131  .  .  .  .  .  .  .  .  }
+   132  .  .  .  .  .  .  .  }
+   133  .  .  .  .  .  .  .  Ellipsis: -
+   134  .  .  .  .  .  .  .  Rparen: main.go:13:24
+   135  .  .  .  .  .  .  }
+   136  .  .  .  .  .  }
+   137  .  .  .  .  .  1: *ast.AssignStmt {
+   138  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+   139  .  .  .  .  .  .  .  0: *ast.Ident {
+   140  .  .  .  .  .  .  .  .  NamePos: main.go:15:2
+   141  .  .  .  .  .  .  .  .  Name: "lunar"
+   142  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   143  .  .  .  .  .  .  .  .  .  Kind: var
+   144  .  .  .  .  .  .  .  .  .  Name: "lunar"
+   145  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 137)
+   146  .  .  .  .  .  .  .  .  .  Data: nil
+   147  .  .  .  .  .  .  .  .  .  Type: nil
+   148  .  .  .  .  .  .  .  .  }
+   149  .  .  .  .  .  .  .  }
+   150  .  .  .  .  .  .  }
+   151  .  .  .  .  .  .  TokPos: main.go:15:8
+   152  .  .  .  .  .  .  Tok: :=
+   153  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   154  .  .  .  .  .  .  .  0: *ast.UnaryExpr {
+   155  .  .  .  .  .  .  .  .  OpPos: main.go:15:11
+   156  .  .  .  .  .  .  .  .  Op: &
+   157  .  .  .  .  .  .  .  .  X: *ast.CompositeLit {
+   158  .  .  .  .  .  .  .  .  .  Type: *ast.SelectorExpr {
+   159  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   160  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:15:12
+   161  .  .  .  .  .  .  .  .  .  .  .  Name: "service"
+   162  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   163  .  .  .  .  .  .  .  .  .  .  }
+   164  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   165  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:15:20
+   166  .  .  .  .  .  .  .  .  .  .  .  Name: "LunarUML"
+   167  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   168  .  .  .  .  .  .  .  .  .  .  }
+   169  .  .  .  .  .  .  .  .  .  }
+   170  .  .  .  .  .  .  .  .  .  Lbrace: main.go:15:28
+   171  .  .  .  .  .  .  .  .  .  Elts: []ast.Expr (len = 1) {
+   172  .  .  .  .  .  .  .  .  .  .  0: *ast.KeyValueExpr {
+   173  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   174  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:16:3
+   175  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Config"
+   176  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   177  .  .  .  .  .  .  .  .  .  .  .  }
+   178  .  .  .  .  .  .  .  .  .  .  .  Colon: main.go:16:9
+   179  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.CallExpr {
+   180  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.Ident {
+   181  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:16:11
+   182  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "loadConfig"
+   183  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   184  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: func
+   185  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "loadConfig"
+   186  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *ast.FuncDecl {
+   187  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Doc: nil
+   188  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Recv: nil
+   189  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: *ast.Ident {
+   190  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:25:6
+   191  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "loadConfig"
+   192  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 183)
+   193  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   194  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.FuncType {
+   195  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Func: main.go:25:1
+   196  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TypeParams: nil
+   197  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Params: *ast.FieldList {
+   198  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Opening: main.go:25:16
+   199  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  List: nil
+   200  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Closing: main.go:25:17
+   201  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   202  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Results: *ast.FieldList {
+   203  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Opening: -
+   204  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  List: []*ast.Field (len = 1) {
+   205  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Field {
+   206  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Doc: nil
+   207  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Names: nil
+   208  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.SelectorExpr {
+   209  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   210  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:25:19
+   211  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "models"
+   212  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   213  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   214  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   215  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:25:26
+   216  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "YamlConfig"
+   217  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   218  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   219  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   220  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Tag: nil
+   221  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Comment: nil
+   222  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   223  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   224  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Closing: -
+   225  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   226  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   227  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Body: *ast.BlockStmt {
+   228  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrace: main.go:25:37
+   229  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  List: []ast.Stmt (len = 6) {
+   230  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.AssignStmt {
+   231  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lhs: []ast.Expr (len = 2) {
+   232  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   233  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:26:2
+   234  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "file"
+   235  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   236  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   237  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "file"
+   238  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 230)
+   239  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+   240  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+   241  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   242  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   243  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.Ident {
+   244  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:26:8
+   245  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "err"
+   246  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   247  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   248  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "err"
+   249  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 230)
+   250  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+   251  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+   252  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   253  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   254  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   255  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TokPos: main.go:26:12
+   256  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Tok: :=
+   257  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   258  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   259  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   260  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   261  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:26:15
+   262  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "os"
+   263  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   264  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   265  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   266  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:26:18
+   267  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ReadFile"
+   268  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   269  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   270  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   271  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: main.go:26:26
+   272  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   273  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.SelectorExpr {
+   274  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   275  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:26:27
+   276  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "consts"
+   277  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   278  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   279  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   280  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:26:34
+   281  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "RelativeYamlConfigFilePath"
+   282  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   283  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   284  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   285  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   286  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   287  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: main.go:26:60
+   288  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   289  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   290  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   291  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.IfStmt {
+   292  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  If: main.go:27:2
+   293  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Init: nil
+   294  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Cond: *ast.BinaryExpr {
+   295  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   296  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:27:5
+   297  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "err"
+   298  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 246)
+   299  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   300  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  OpPos: main.go:27:9
+   301  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Op: !=
+   302  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Y: *ast.Ident {
+   303  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:27:12
+   304  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "nil"
+   305  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   306  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   307  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   308  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Body: *ast.BlockStmt {
+   309  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrace: main.go:27:16
+   310  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  List: []ast.Stmt (len = 2) {
+   311  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.ExprStmt {
+   312  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
+   313  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   314  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   315  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:28:3
+   316  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "log"
+   317  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   318  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   319  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   320  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:28:7
+   321  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Error"
+   322  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   323  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   324  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   325  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: main.go:28:12
+   326  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   327  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   328  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: main.go:28:13
+   329  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   330  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"read file error\""
+   331  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   332  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   333  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   334  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: main.go:28:30
+   335  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   336  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   337  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.ExprStmt {
+   338  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
+   339  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   340  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   341  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:29:3
+   342  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "os"
+   343  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   344  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   345  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   346  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:29:6
+   347  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Exit"
+   348  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   349  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   350  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   351  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: main.go:29:10
+   352  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   353  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   354  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: main.go:29:11
+   355  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   356  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "1"
+   357  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   358  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   359  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   360  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: main.go:29:12
+   361  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   362  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   363  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   364  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rbrace: main.go:30:2
+   365  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   366  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Else: nil
+   367  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   368  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  2: *ast.AssignStmt {
+   369  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+   370  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   371  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:31:2
+   372  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "config"
+   373  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   374  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   375  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "config"
+   376  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 368)
+   377  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+   378  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+   379  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   380  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   381  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   382  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TokPos: main.go:31:9
+   383  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Tok: :=
+   384  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   385  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.CompositeLit {
+   386  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.SelectorExpr {
+   387  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   388  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:31:12
+   389  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "models"
+   390  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   391  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   392  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   393  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:31:19
+   394  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "YamlConfig"
+   395  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   396  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   397  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   398  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrace: main.go:31:29
+   399  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Elts: nil
+   400  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rbrace: main.go:31:30
+   401  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Incomplete: false
+   402  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   403  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   404  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   405  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  3: *ast.AssignStmt {
+   406  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+   407  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   408  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:32:2
+   409  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "err"
+   410  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 246)
+   411  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   412  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   413  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TokPos: main.go:32:6
+   414  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Tok: =
+   415  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   416  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   417  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   418  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   419  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:32:8
+   420  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "yaml"
+   421  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   422  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   423  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   424  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:32:13
+   425  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Unmarshal"
+   426  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   427  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   428  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   429  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: main.go:32:22
+   430  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 2) {
+   431  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   432  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:32:23
+   433  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "file"
+   434  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 235)
+   435  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   436  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.UnaryExpr {
+   437  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  OpPos: main.go:32:29
+   438  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Op: &
+   439  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   440  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:32:30
+   441  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "config"
+   442  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 373)
+   443  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   444  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   445  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   446  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   447  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: main.go:32:36
+   448  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   449  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   450  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   451  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  4: *ast.IfStmt {
+   452  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  If: main.go:33:2
+   453  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Init: nil
+   454  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Cond: *ast.BinaryExpr {
+   455  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   456  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:33:5
+   457  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "err"
+   458  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 246)
+   459  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   460  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  OpPos: main.go:33:9
+   461  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Op: !=
+   462  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Y: *ast.Ident {
+   463  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:33:12
+   464  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "nil"
+   465  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   466  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   467  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   468  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Body: *ast.BlockStmt {
+   469  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrace: main.go:33:16
+   470  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  List: []ast.Stmt (len = 2) {
+   471  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.ExprStmt {
+   472  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
+   473  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   474  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   475  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:34:3
+   476  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "log"
+   477  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   478  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   479  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   480  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:34:7
+   481  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Error"
+   482  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   483  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   484  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   485  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: main.go:34:12
+   486  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   487  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   488  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: main.go:34:13
+   489  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   490  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"unmarshal error\""
+   491  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   492  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   493  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   494  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: main.go:34:30
+   495  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   496  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   497  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.ExprStmt {
+   498  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
+   499  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   500  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   501  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:35:3
+   502  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "os"
+   503  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   504  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   505  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   506  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:35:6
+   507  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Exit"
+   508  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   509  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   510  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   511  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: main.go:35:10
+   512  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   513  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   514  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: main.go:35:11
+   515  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   516  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "1"
+   517  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   518  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   519  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   520  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: main.go:35:12
+   521  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   522  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   523  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   524  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rbrace: main.go:36:2
+   525  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   526  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Else: nil
+   527  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   528  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  5: *ast.ReturnStmt {
+   529  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Return: main.go:37:2
+   530  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Results: []ast.Expr (len = 1) {
+   531  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   532  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: main.go:37:9
+   533  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "config"
+   534  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 373)
+   535  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   536  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   537  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   538  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   539  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rbrace: main.go:38:1
+   540  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   541  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   542  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+   543  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+   544  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   545  .  .  .  .  .  .  .  .  .  .  .  .  }
+   546  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: main.go:16:21
+   547  .  .  .  .  .  .  .  .  .  .  .  .  Args: nil
+   548  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   549  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: main.go:16:22
+   550  .  .  .  .  .  .  .  .  .  .  .  }
+   551  .  .  .  .  .  .  .  .  .  .  }
+   552  .  .  .  .  .  .  .  .  .  }
+   553  .  .  .  .  .  .  .  .  .  Rbrace: main.go:17:2
+   554  .  .  .  .  .  .  .  .  .  Incomplete: false
+   555  .  .  .  .  .  .  .  .  }
+   556  .  .  .  .  .  .  .  }
+   557  .  .  .  .  .  .  }
+   558  .  .  .  .  .  }
+   559  .  .  .  .  .  2: *ast.ExprStmt {
+   560  .  .  .  .  .  .  X: *ast.CallExpr {
+   561  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   562  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   563  .  .  .  .  .  .  .  .  .  NamePos: main.go:18:2
+   564  .  .  .  .  .  .  .  .  .  Name: "lunar"
+   565  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 142)
+   566  .  .  .  .  .  .  .  .  }
+   567  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   568  .  .  .  .  .  .  .  .  .  NamePos: main.go:18:8
+   569  .  .  .  .  .  .  .  .  .  Name: "InitUML"
+   570  .  .  .  .  .  .  .  .  .  Obj: nil
+   571  .  .  .  .  .  .  .  .  }
+   572  .  .  .  .  .  .  .  }
+   573  .  .  .  .  .  .  .  Lparen: main.go:18:15
+   574  .  .  .  .  .  .  .  Args: nil
+   575  .  .  .  .  .  .  .  Ellipsis: -
+   576  .  .  .  .  .  .  .  Rparen: main.go:18:16
+   577  .  .  .  .  .  .  }
+   578  .  .  .  .  .  }
+   579  .  .  .  .  .  3: *ast.ExprStmt {
+   580  .  .  .  .  .  .  X: *ast.CallExpr {
+   581  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   582  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   583  .  .  .  .  .  .  .  .  .  NamePos: main.go:19:2
+   584  .  .  .  .  .  .  .  .  .  Name: "lunar"
+   585  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 142)
+   586  .  .  .  .  .  .  .  .  }
+   587  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   588  .  .  .  .  .  .  .  .  .  NamePos: main.go:19:8
+   589  .  .  .  .  .  .  .  .  .  Name: "ParseCodeWithAST"
+   590  .  .  .  .  .  .  .  .  .  Obj: nil
+   591  .  .  .  .  .  .  .  .  }
+   592  .  .  .  .  .  .  .  }
+   593  .  .  .  .  .  .  .  Lparen: main.go:19:24
+   594  .  .  .  .  .  .  .  Args: nil
+   595  .  .  .  .  .  .  .  Ellipsis: -
+   596  .  .  .  .  .  .  .  Rparen: main.go:19:25
+   597  .  .  .  .  .  .  }
+   598  .  .  .  .  .  }
+   599  .  .  .  .  .  4: *ast.ExprStmt {
+   600  .  .  .  .  .  .  X: *ast.CallExpr {
+   601  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   602  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   603  .  .  .  .  .  .  .  .  .  NamePos: main.go:20:2
+   604  .  .  .  .  .  .  .  .  .  Name: "lunar"
+   605  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 142)
+   606  .  .  .  .  .  .  .  .  }
+   607  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   608  .  .  .  .  .  .  .  .  .  NamePos: main.go:20:8
+   609  .  .  .  .  .  .  .  .  .  Name: "PrintNodeForDebug"
+   610  .  .  .  .  .  .  .  .  .  Obj: nil
+   611  .  .  .  .  .  .  .  .  }
+   612  .  .  .  .  .  .  .  }
+   613  .  .  .  .  .  .  .  Lparen: main.go:20:25
+   614  .  .  .  .  .  .  .  Args: nil
+   615  .  .  .  .  .  .  .  Ellipsis: -
+   616  .  .  .  .  .  .  .  Rparen: main.go:20:26
+   617  .  .  .  .  .  .  }
+   618  .  .  .  .  .  }
+   619  .  .  .  .  .  5: *ast.ExprStmt {
+   620  .  .  .  .  .  .  X: *ast.CallExpr {
+   621  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   622  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   623  .  .  .  .  .  .  .  .  .  NamePos: main.go:21:2
+   624  .  .  .  .  .  .  .  .  .  Name: "lunar"
+   625  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 142)
+   626  .  .  .  .  .  .  .  .  }
+   627  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   628  .  .  .  .  .  .  .  .  .  NamePos: main.go:21:8
+   629  .  .  .  .  .  .  .  .  .  Name: "Inspect"
+   630  .  .  .  .  .  .  .  .  .  Obj: nil
+   631  .  .  .  .  .  .  .  .  }
+   632  .  .  .  .  .  .  .  }
+   633  .  .  .  .  .  .  .  Lparen: main.go:21:15
+   634  .  .  .  .  .  .  .  Args: nil
+   635  .  .  .  .  .  .  .  Ellipsis: -
+   636  .  .  .  .  .  .  .  Rparen: main.go:21:16
+   637  .  .  .  .  .  .  }
+   638  .  .  .  .  .  }
+   639  .  .  .  .  .  6: *ast.ExprStmt {
+   640  .  .  .  .  .  .  X: *ast.CallExpr {
+   641  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   642  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   643  .  .  .  .  .  .  .  .  .  NamePos: main.go:22:2
+   644  .  .  .  .  .  .  .  .  .  Name: "lunar"
+   645  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 142)
+   646  .  .  .  .  .  .  .  .  }
+   647  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   648  .  .  .  .  .  .  .  .  .  NamePos: main.go:22:8
+   649  .  .  .  .  .  .  .  .  .  Name: "OutputUML"
+   650  .  .  .  .  .  .  .  .  .  Obj: nil
+   651  .  .  .  .  .  .  .  .  }
+   652  .  .  .  .  .  .  .  }
+   653  .  .  .  .  .  .  .  Lparen: main.go:22:17
+   654  .  .  .  .  .  .  .  Args: nil
+   655  .  .  .  .  .  .  .  Ellipsis: -
+   656  .  .  .  .  .  .  .  Rparen: main.go:22:18
+   657  .  .  .  .  .  .  }
+   658  .  .  .  .  .  }
+   659  .  .  .  .  }
+   660  .  .  .  .  Rbrace: main.go:23:1
+   661  .  .  .  }
+   662  .  .  }
+   663  .  .  2: *(obj @ 186)
+   664  .  }
+   665  .  FileStart: main.go:1:1
+   666  .  FileEnd: main.go:38:3
+   667  .  Scope: *ast.Scope {
+   668  .  .  Outer: nil
+   669  .  .  Objects: map[string]*ast.Object (len = 2) {
+   670  .  .  .  "main": *(obj @ 90)
+   671  .  .  .  "loadConfig": *(obj @ 183)
+   672  .  .  }
+   673  .  }
+   674  .  Imports: []*ast.ImportSpec (len = 6) {
+   675  .  .  0: *(obj @ 15)
+   676  .  .  1: *(obj @ 26)
+   677  .  .  2: *(obj @ 37)
+   678  .  .  3: *(obj @ 48)
+   679  .  .  4: *(obj @ 59)
+   680  .  .  5: *(obj @ 70)
+   681  .  }
+   682  .  Unresolved: []*ast.Ident (len = 13) {
+   683  .  .  0: *(obj @ 114)
+   684  .  .  1: *(obj @ 159)
+   685  .  .  2: *(obj @ 209)
+   686  .  .  3: *(obj @ 260)
+   687  .  .  4: *(obj @ 274)
+   688  .  .  5: *(obj @ 302)
+   689  .  .  6: *(obj @ 314)
+   690  .  .  7: *(obj @ 340)
+   691  .  .  8: *(obj @ 387)
+   692  .  .  9: *(obj @ 418)
+   693  .  .  10: *(obj @ 462)
+   694  .  .  11: *(obj @ 474)
+   695  .  .  12: *(obj @ 500)
+   696  .  }
+   697  .  Comments: nil
+   698  .  GoVersion: ""
+   699  }

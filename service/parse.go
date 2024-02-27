@@ -1,10 +1,10 @@
 package service
 
 import (
+	"github.com/Yukun4119/golang_utils/log"
 	"go/ast"
 	"go/parser"
 	"go/token"
-	"log"
 	"os"
 )
 
@@ -12,7 +12,7 @@ func (l *LunarUML) ParseCodeWithAST() {
 	l.FSet = token.NewFileSet()
 	l.Node, _ = parser.ParseFile(l.FSet, l.Config.LunarConfig.FilePath, nil, parser.ParseComments)
 
-	log.Println("Finish parsing code")
+	log.Info("Finish parsing code")
 
 	// TODO: handle error
 	//if err != nil {
@@ -22,20 +22,22 @@ func (l *LunarUML) ParseCodeWithAST() {
 
 func (l *LunarUML) PrintNodeForDebug() {
 	if l.Config.LunarConfig.IsDebug {
-		log.Println("Debug mode on")
+		log.Info("Debug mode on")
 		// Create a new file
 		f, err := os.Create("output/ast.txt")
 		if err != nil {
-			log.Fatal(err)
+			log.Error("error: %+v", err)
+			os.Exit(1)
 		}
 		defer f.Close()
 
 		// Redirect the output of ast.Print to the file
 		err = ast.Fprint(f, l.FSet, l.Node, nil)
 		if err != nil {
-			log.Fatal(err)
+			log.Error("error: %+v", err)
+			os.Exit(1)
 		}
 	} else {
-		log.Println("Debug mode off")
+		log.Info("Debug mode off")
 	}
 }

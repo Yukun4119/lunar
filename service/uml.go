@@ -3,7 +3,7 @@ package service
 import (
 	"bufio"
 	"fmt"
-	"log"
+	"github.com/Yukun4119/golang_utils/log"
 	"lunar_uml/consts"
 	"os"
 )
@@ -12,7 +12,7 @@ func (l *LunarUML) InitUML() {
 	l.Participants = append(l.Participants, l.Config.LunarConfig.TargetInf)
 	l.PlantUML = append(l.PlantUML, consts.UmlStartuml)
 	l.PlantUML = append(l.PlantUML, consts.UmlSetAutonumber)
-	log.Println("Finish init UML")
+	log.Info("Finish init UML")
 }
 
 func (l *LunarUML) OutputUML() {
@@ -32,5 +32,5 @@ func (l *LunarUML) OutputUML() {
 	}
 	writer.Flush()
 
-	log.Println("Finish writing uml file")
+	log.Info("Finish writing uml file")
 }
