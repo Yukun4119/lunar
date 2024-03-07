@@ -25,13 +25,13 @@ func main() {
 func loadConfig() models.YamlConfig {
 	file, err := os.ReadFile(consts.RelativeYamlConfigFilePath)
 	if err != nil {
-		log.Error("read file error")
+		log.Error("Read file error")
 		os.Exit(1)
 	}
 	config := models.YamlConfig{}
 	err = yaml.Unmarshal(file, &config)
 	if err != nil {
-		log.Error("unmarshal error")
+		log.Error("Unmarshal error")
 		os.Exit(1)
 	}
 	return config
