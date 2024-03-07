@@ -39,18 +39,22 @@ func (l *LunarUML) Inspect() {
 
 func (l *LunarUML) TranverseFunc(fn *ast.FuncDecl) {
 	for _, node := range fn.Body.List {
-		switch nodeType := node.(type) {
-		case *ast.AssignStmt:
-			l.AnalyseAssignStmt(nodeType)
-		case *ast.SwitchStmt:
-			l.AnalyseSwitchStmt(nodeType)
-		case *ast.IfStmt:
-			l.AnalyseIfStmt(nodeType)
-		case *ast.RangeStmt:
-			l.AnalyseRangeStmt(nodeType)
-		case *ast.ExprStmt:
-			l.AnalyseCallExpr(nodeType.X.(*ast.CallExpr))
-		}
+		l.Analyser(node)
+	}
+}
+
+func (l *LunarUML) Analyser(node ast.Stmt) {
+	switch nodeType := node.(type) {
+	case *ast.AssignStmt:
+		l.AnalyseAssignStmt(nodeType)
+	case *ast.SwitchStmt:
+		l.AnalyseSwitchStmt(nodeType)
+	case *ast.IfStmt:
+		l.AnalyseIfStmt(nodeType)
+	case *ast.RangeStmt:
+		l.AnalyseRangeStmt(nodeType)
+	case *ast.ExprStmt:
+		l.AnalyseCallExpr(nodeType.X.(*ast.CallExpr))
 	}
 }
 
