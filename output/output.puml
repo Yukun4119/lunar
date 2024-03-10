@@ -1,11 +1,3 @@
 @startuml
 autonumber
-alt if *ast.SelectorExpr(*ast.SelectorExpr)
-test -> test: call Errorf
-end
-test -> test: call GetPrice
-alt if err != nil
-end
-test -> test: call Add
-test -> test: call Sub
 @enduml

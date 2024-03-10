@@ -3,7 +3,7 @@ package service
 import (
 	"bufio"
 	"fmt"
-	"github.com/Yukun4119/golang_utils/log"
+	"github.com/ryqdev/golang_utils/log"
 	"lunar_uml/consts"
 	"os"
 )

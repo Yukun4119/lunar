@@ -2,7 +2,7 @@ package service
 
 import (
 	"fmt"
-	"github.com/Yukun4119/golang_utils/log"
+	"github.com/ryqdev/golang_utils/log"
 	"go/ast"
 	"go/token"
 	"lunar_uml/models"
