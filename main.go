@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/ryqdev/golang_utils/log"
+	"gopkg.in/yaml.v3"
 	"lunar_uml/consts"
 	"lunar_uml/models"
 	"lunar_uml/service"

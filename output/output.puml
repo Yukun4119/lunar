@@ -1,13 +1,7 @@
 @startuml
 autonumber
-test -> test: call WriteString
-test -> test: call WriteString
-alt if *ast.SelectorExpr
-test -> test: call WriteString
-test -> test: call WriteString
+test -> test: call foo
+alt if a == *ast.BasicLit
+test -> test: call bar
 end
-test -> test: call WriteString
-test -> test: call WriteString
-test -> test: call WriteString
-test -> test: call WriteString
 @enduml
