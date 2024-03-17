@@ -36,3 +36,4 @@ func loadConfig() models.YamlConfig {
 	}
 	return config
 }
+test
