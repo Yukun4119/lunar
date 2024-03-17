@@ -18,11 +18,6 @@ type LunarUML struct {
 	Node         *ast.File
 }
 
-// TODO: Do I need interface?
-//type Analysis interface {
-//	AnalyseCallExpr(expr *ast.CallExpr)
-//}
-
 func (l *LunarUML) Inspect() {
 	ast.Inspect(l.Node, func(n ast.Node) bool {
 		switch fn := n.(type) {
@@ -95,7 +90,6 @@ func (l *LunarUML) AnalyseRangeStmt(r *ast.RangeStmt) {
 }
 
 func (l *LunarUML) AnalyseIfStmt(ifStmt *ast.IfStmt) {
-	log.Info("hit IfStmt")
 	Cond := l.AnalyseExprIfStmt(ifStmt.Cond)
 	l.PlantUML = append(l.PlantUML, "alt if "+Cond)
 	l.Tranverse(ifStmt.Body)
@@ -110,7 +104,6 @@ func (l *LunarUML) AnalyseSwitchStmt(SwitchStmt *ast.SwitchStmt) {
 }
 
 func (l *LunarUML) AnalyseAssignStmt(AssignStmt *ast.AssignStmt) {
-	log.Info("hit AssignStmt")
 	l.Tranverse(AssignStmt)
 }
 
