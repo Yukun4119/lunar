@@ -9,6 +9,9 @@ import (
 )
 
 func (l *LunarUML) InitUML() {
+	if l.Err != nil {
+		return
+	}
 	l.Participants = append(l.Participants, l.Config.LunarConfig.TargetInf)
 	l.PlantUML = append(l.PlantUML, consts.UmlStartuml)
 	l.PlantUML = append(l.PlantUML, consts.UmlSetAutonumber)
@@ -16,8 +19,9 @@ func (l *LunarUML) InitUML() {
 }
 
 func (l *LunarUML) OutputUML() {
-	// TODO: handle errors
-
+	if l.Err != nil {
+		return
+	}
 	l.PlantUML = append(l.PlantUML, consts.UmlEnduml)
 	outputFile, err := os.Create("output/output.puml")
 	if err != nil {

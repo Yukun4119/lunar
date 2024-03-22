@@ -9,6 +9,9 @@ import (
 )
 
 func (l *LunarUML) ParseCodeWithAST() {
+	if l.Err != nil {
+		return
+	}
 	l.FSet = token.NewFileSet()
 	l.Node, _ = parser.ParseFile(l.FSet, l.Config.LunarConfig.FilePath, nil, parser.ParseComments)
 
@@ -21,6 +24,9 @@ func (l *LunarUML) ParseCodeWithAST() {
 }
 
 func (l *LunarUML) PrintNodeForDebug() {
+	if l.Err != nil {
+		return
+	}
 	if l.Config.LunarConfig.IsDebug {
 		log.Info("Debug mode on")
 		// Create a new file
