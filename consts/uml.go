@@ -5,5 +5,5 @@ const (
 	UmlSetAutonumber = "autonumber"
 	UmlEnduml        = "@enduml"
 
-	RelativeYamlConfigFilePath = "./config/config.yml"
+	RelativeYamlConfigFilePath = "config/config.yml"
 )
