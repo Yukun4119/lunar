@@ -8,24 +8,20 @@ import (
 	"os"
 )
 
-func (l *LunarUML) ParseCodeWithAST() {
+func (l *LunarUML) ParseCodeWithAST() *LunarUML {
 	if l.Err != nil {
-		return
+		return l
 	}
 	l.FSet = token.NewFileSet()
 	l.Node, _ = parser.ParseFile(l.FSet, l.Config.LunarConfig.FilePath, nil, parser.ParseComments)
 
 	log.Info("Finish parsing code")
-
-	// TODO: handle error
-	//if err != nil {
-	//	log.Fatal(err)
-	//}
+	return l
 }
 
-func (l *LunarUML) PrintNodeForDebug() {
+func (l *LunarUML) PrintNodeForDebug() *LunarUML {
 	if l.Err != nil {
-		return
+		return l
 	}
 	if l.Config.LunarConfig.IsDebug {
 		log.Info("Debug mode on")
@@ -46,4 +42,5 @@ func (l *LunarUML) PrintNodeForDebug() {
 	} else {
 		log.Info("Debug mode off")
 	}
+	return l
 }

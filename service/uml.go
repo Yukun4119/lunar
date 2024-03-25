@@ -8,25 +8,26 @@ import (
 	"os"
 )
 
-func (l *LunarUML) InitUML() {
+func (l *LunarUML) InitUML() *LunarUML {
 	if l.Err != nil {
-		return
+		return l
 	}
 	l.Participants = append(l.Participants, l.Config.LunarConfig.TargetInf)
 	l.PlantUML = append(l.PlantUML, consts.UmlStartuml)
 	l.PlantUML = append(l.PlantUML, consts.UmlSetAutonumber)
 	log.Info("Finish init UML")
+	return l
 }
 
-func (l *LunarUML) OutputUML() {
+func (l *LunarUML) OutputUML() *LunarUML {
 	if l.Err != nil {
-		return
+		return l
 	}
 	l.PlantUML = append(l.PlantUML, consts.UmlEnduml)
 	outputFile, err := os.Create("output/output.puml")
 	if err != nil {
 		fmt.Println("Error:", err)
-		return
+		return l
 	}
 	defer outputFile.Close()
 
@@ -37,4 +38,5 @@ func (l *LunarUML) OutputUML() {
 	writer.Flush()
 
 	log.Info("Finish writing uml file")
+	return l
 }

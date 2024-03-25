@@ -1,6 +1,12 @@
 package util
 
-import "go/ast"
+import (
+	"github.com/ryqdev/golang_utils/log"
+	"go/ast"
+	"gopkg.in/yaml.v3"
+	"lunar_uml/models"
+	"os"
+)
 
 func IsRPC(expr *ast.CallExpr) (rpc string, isRpc bool) {
 	rpc = ""
@@ -39,4 +45,19 @@ func GetCallExprName(expr *ast.CallExpr) string {
 	default:
 		return "unknown"
 	}
+}
+
+func LoadConfig(configFile string) models.YamlConfig {
+	file, err := os.ReadFile(configFile)
+	if err != nil {
+		log.Error("Read file error")
+		os.Exit(1)
+	}
+	config := models.YamlConfig{}
+	err = yaml.Unmarshal(file, &config)
+	if err != nil {
+		log.Error("Unmarshal error")
+		os.Exit(1)
+	}
+	return config
 }

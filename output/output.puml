@@ -1,7 +1,3 @@
 @startuml
 autonumber
-test -> test: call foo
-alt if a == *ast.BasicLit
-test -> test: call bar
-end
 @enduml

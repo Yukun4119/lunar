@@ -1,5 +1,5 @@
 lunarConfig:
   curService: "test"
   targetInf: "demo"
-  filePath: "./demo/demo.go"
+  filePath: "config/config.yml"
   isDebug: true

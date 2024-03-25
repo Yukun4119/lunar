@@ -16,12 +16,12 @@ type LunarUML struct {
 	Participants []string
 	FSet         *token.FileSet
 	Node         *ast.File
-	Err 		error
+	Err          error
 }
 
-func (l *LunarUML) Inspect() {
+func (l *LunarUML) Inspect() *LunarUML {
 	if l.Err != nil {
-		return
+		return l
 	}
 	ast.Inspect(l.Node, func(n ast.Node) bool {
 		switch fn := n.(type) {
@@ -34,6 +34,7 @@ func (l *LunarUML) Inspect() {
 		return true
 	})
 	log.Info("Finish Inspecting")
+	return l
 }
 
 func (l *LunarUML) TranverseFunc(fn *ast.FuncDecl) {
