@@ -7,7 +7,7 @@ import (
 )
 
 func TestLoadConfig(t *testing.T) {
-	filePath := "config/config.yml"
+	filePath := "../../config/config.yml"
 	config := util.LoadConfig(filePath)
 	assert.NotNilf(t, config, "not nil")
 }
